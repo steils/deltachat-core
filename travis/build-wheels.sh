@@ -7,7 +7,9 @@ yum install -y openssl-devel sqlite3-devel zlib-devel libsals-devel bzip2-devel
 # Compile wheels
 for PYBIN in /opt/python/*/bin; do
     "${PYBIN}/pip" install cffi
+    pushd python
     "${PYBIN}/pip" wheel /io/ -w wheelhouse/
+    popd
 done
 
 # Bundle external shared libraries into the wheels

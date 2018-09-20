@@ -42,7 +42,6 @@ script:
   - source venv/bin/activate
   - pip install tox
   - tox
-  - docker run --rm -v `pwd`:/io $DOCKER_IMAGE $PRE_CMD sh -c 'ls /io/'
-  - docker run --rm -v `pwd`:/io $DOCKER_IMAGE $PRE_CMD sh -c 'ls /io/travis'
+  - cd ..
   - docker run --rm -v `pwd`:/io $DOCKER_IMAGE $PRE_CMD /io/travis/build-wheels.sh
   - ls wheelhouse/
