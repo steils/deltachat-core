@@ -28,6 +28,8 @@ src = [
 ]
 inc = include_directories('include')
 
+add_project_arguments('-std=c99', language: 'c')
+
 # We don't own this subproject, silence some warnings
 ccargs = []
 cc = meson.get_compiler('c')
