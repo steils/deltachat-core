@@ -346,7 +346,7 @@ static char* get_sys_config_str(const char* key)
 		       " mail_server mail_user mail_pw mail_port"
 		       " send_server send_user send_pw send_port"
 		       " server_flags displayname"
-		       " selfstatus selfavatar"
+		       " selfstatus imap_folder selfavatar"
 		       " e2ee_enabled mdns_enabled"
 		       " save_mime_headers"
 		       " sys.version sys.msgsize_max_recommended sys.config_keys");
